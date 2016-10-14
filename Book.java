@@ -1,71 +1,65 @@
 
 public class Book {
+	
+private String name;
+private Author[] authors;
+private int qtyInStock;
+private double price;
 
-	private String name;
-	private Author author;
-	private double price;
-	private int qtyInstock = 0;
-	
-	
-	public Book(String name,Author author,double price)			//constructor with 3 parameters
-	{
+public Book(String name, Author[] author, double price)		//constructor with 3 parameters
+{
+	this.name = name;
+	authors = author;
+	this.price = price;
+}
 
-		this.name = name;
-		this.author = author;
-		this.price = price;
-	}
+public Book(String name, Author[] author,double price,int qtyInStock)	//constructor with 4 parameters
+{
+	this.name = name;
+	authors = author;
+	this.qtyInStock = qtyInStock;
+	this.price = price;
 	
-	public Book(String name,Author author,double price,int qty)	//constructor with 4 parameters
+}
+
+public String getName()				//returns name to calling function
+{
+	this.name = name;
+	return name;
+}
+
+public Author[] getAuthors()		//returns array of author name to calling function
+{
+	return authors;
+}
+public double getPrice()			//returns price to calling function
+{
+	return price;
+}
+public void setPrice(double price)	//sets price as input to price
+{
+	price = price;
+}
+public int getQtyInStock()			//returns qtyInstock to calling function
+{
+	return qtyInStock;
+}
+public int setQtyInStock(int qtyInStock)	//sets 'qtyInStock' to qtyInstock
+{
+	return qtyInStock;
+}
+
+public String toString()					//toString function
+{
+	
+	return "Book-"+name+" by ";
+}
+
+public void printAuthors()					//prints authors name
+{
+	for(int i = 0;i<authors.length;i++)
 	{
-		
-		this.name = name;
-		this.author = author;
-		
-		this.price = price;
-		this.qtyInstock = qty;
+		System.out.println(authors[i]);
 	}
-	
-	public String getName()										//returns name to calling function
-	{
-		name = name;
-		return name;
-	}
-	
-	public Author getAuthor()									//returns author name to calling function
-	{
-		author = author;
-		return author;
-	}
-	
-	public double getPrice()									//returns price to calling function
-	{
-		price = price;
-		return price;
-	}
-	
-	public void setPrice(double p)								//sets 'p' as input to price
-	{
-		price = p;
-	}
-	
-	public int getQtyInStock()									//returns qtyInstock to calling function
-	{
-		qtyInstock = qtyInstock;
-		return qtyInstock;
-	}
-	
-	public void setQtyInStock(int qty)							//sets 'qty' to qtyInstock
-	{
-		qtyInstock = qty;
-	}
-	
-	
-	public String toString()									//toString function
-	{
-		return "'"+name+"' by ";
-	}
-	
-	
-	
-	
+}
 }

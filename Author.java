@@ -1,4 +1,4 @@
-//import java.lang.*;
+
 public class Author {
 
 	private String name;
@@ -39,9 +39,9 @@ public class Author {
 
 	public String toString()					//toString function
 	{
-		//String str = ""
-		return ""+name+" "+gender+" "+email;
-		//String str = "The box has width as "+name+",height as "+gender+" and length as "+email;
+		
+		
+			return "author-" + name + "(" + gender + ")@email " + email + ".";
 		
 	}
 
